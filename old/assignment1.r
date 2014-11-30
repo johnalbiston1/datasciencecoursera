@@ -7,5 +7,5 @@
      mean(dat[ , pollutant], na.rm = TRUE)
      
  }  
-## test githubuio
+## test github 
 }
