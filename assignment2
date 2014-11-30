@@ -1,0 +1,31 @@
+## These allow the cashing of the inverse of a matrix
+## they allow a matrix to be created an dthen cashed alowing for quick retrival
+
+## this function allow the matrix to be set and retrives with a get
+
+makeCacheMatrix <- function(x = matrix()) {
+  mat <- NULL
+  set <- function(y){
+    x<<- y
+    mat<<- NULL
+  }
+  get<- function()x
+  
+  getinverse <- solve(x) 
+  list (set=set, get=get,getinverse=getinverse)
+}
+
+
+## this function inverts the matrix that is created in the makecashematrix function
+
+cacheSolve <- function(x, ...) {
+        ## Return a matrix that is the inverse of 'x'
+  mat <- getinverse
+  if (!is.null(mat)){
+    return mat
+  }
+  matrix <-x$get()
+  mat <- solve(matrix, ...)
+  x$setinverse(mat)
+  mat
+}

@@ -1,0 +1,32 @@
+best <- function(state, outcome) {
+  ## Read outcome data
+  infile<- read.csv("outcome-of-care-measures.csv", colClasses = "character")
+state2 == state
+outcome2==outcome
+if (outcome == "heart attack")
+    x<- 3
+if (outcome == "heart failure")
+    x<-4
+if (outcome == "pneumonia")
+    x<-5
+
+
+
+df<- c(2,7,11,17,23)
+r<- infile[df]
+e<-subset(r,State==state2)
+
+       
+w<-e[x]
+ex<- w[w!="Not Available"]
+ans<-subset(e,e[x]==min(ex))
+ans1<- ans[,1]
+
+
+
+  ## Check that state and outcome are valid
+  ## Return hospital name in that state with lowest 30-day death
+
+ans1
+
+}

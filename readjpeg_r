@@ -1,0 +1,17 @@
+library(jpeg)
+##url<-"https://d396qusza40orc.cloudfront.net/getdata%2Fjeff.jpg"
+##photo<- readJPEG(url ,  native = FALSE)
+pic2<-"Picture2.jpg"
+photo3<-readJPEG(pic2, native=FALSE)
+##img <- readJPEG(system.file("img", "Rlogo.jpg", package="jpeg"))
+##photo2<- readJPEG(system.file("img",url,package="jpeg"))
+##photo2<- readJPEG(system.file(url,package="jpeg"))
+
+q1<- quantile(photo3)
+q2<- quantile(photo3, probs=c(0.3,0.8))
+
+photo4<-readJPEG(pic2, native=TRUE)
+q3<- quantile(photo4, probs=c(0.3,0.8))
+
+library(tools)
+md5sum(photo3)

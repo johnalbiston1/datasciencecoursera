@@ -1,0 +1,10 @@
+library(XML)
+library(RCurl)
+fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml"
+xData <- getURL(fileURL, ssl.verifypeer = FALSE)
+doc <- xmlTreeParse(xData, useInternal =T)
+f<-xmlName(rootNode)
+g<- names(rootNode)
+rootNode[[1]][[1]][[2]]
+want<- xpathSApply(rootNode, "//ZipCode",xmlValue)
+e<<-subset(want,want==21231)

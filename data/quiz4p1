@@ -1,0 +1,11 @@
+newdata<- read.csv("getdata-data-ss06hid (2).csv")
+ans1<-strsplit(newdata,"wgtp") 
+
+library(quantmod)
+amzn = getSymbols("AMZN",auto.assign=FALSE)
+sampleTimes = index(amzn) 
+yans<-year(sampleTimes)
+yans1<- subset(yans, yans==2012)
+dans<- wday(sampleTimes, label=TRUE)
+mans1<- subset( sampleTimes,yans==2012,dans==Mon )
+mans1<- subset( yans1,dans==Mon )
