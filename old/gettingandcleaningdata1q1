@@ -1,8 +1,0 @@
-myurl <- download.file(url=myurl, destfile="localcopy.csv")
-myurl <- download.file(url=myurl, destfile="localcopy.xlsx", mode="wb")
-
-fileUrl <-  "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv"
-myurl <- download.file(url=fileUrl, destfile="mycsv.csv", method="curl")
-infile<- read.csv("mycsv.csv", colClasses = "character")
-
-e<<-subset(infile,infile$val==24)
