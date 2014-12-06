@@ -49,7 +49,7 @@ qwert<-finaldata1_DT[, lapply(.SD,mean), by = c("activty","subject")]
 qwert2<-finaldata1_DT[, lapply(.SD,mean), by = c("subject","activty")]
 
 qwert3 <- melt(finaldata1_DT, id.vars = c("subject","activty"))
-write.csv(qwert3, file="output3")
+write.csv(qwert2, file="output2")
 
 
 
