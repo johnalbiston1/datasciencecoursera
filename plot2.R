@@ -1,11 +1,12 @@
-setwd("C:/datasci_r2")
 ## graph plotting assignment1, part2
+setwd("C:/datasci_r2")
+
 ##check file is in working directory
 ##read in file
 
 data1<- read.csv( "household_power_consumption.txt" ,header = TRUE,sep = ";", stringsAsFactors= F, na.string="?")
 
-## change data format
+## change date format
 
 data1$Date3 <- strptime(data1$Date, "%d/%m/%Y")
 
@@ -26,7 +27,7 @@ axis(1, at=c(1,1440,2880), labels=c("Thu","Fri","Sat"))
 
 
 ##save a png
-png(file="graph2.png")
+png(file="plot2.png")
 ##graph code 
 with(data4,plot(data4$recno, data4$Global_KW, type="n",xaxt= "n",ylab="Global Active Power (kilowatts)", xlab=""))
 lines(data4$recno,as.numeric(data4$Global_KW),col="black")
