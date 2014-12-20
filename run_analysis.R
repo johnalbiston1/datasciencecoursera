@@ -16,7 +16,9 @@ trainfull<-cbind(train1,train2,trainsub)
 test1<- read.csv("X_test.txt",header = FALSE,sep = "")
 test2<- read.csv("y_test.txt",header = FALSE,sep = "")
 testsub<-read.csv("subject_test.txt",header = FALSE,sep = "")
-##create dataset 1
+
+
+##create dataset 2 
 testfull<-cbind(test1,test2,testsub)
 
 ## add two data sets together
